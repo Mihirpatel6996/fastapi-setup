@@ -102,12 +102,7 @@ class User(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 ```
 
-## 🧪 Testing
 
-To run tests (when implemented):
-```bash
-pytest
-```
 
 ## 🛡️ Environment Variables
 
@@ -115,13 +110,7 @@ pytest
 |---------------|-----------------------|---------------|
 | DATABASE_URL  | PostgreSQL connection URL | postgresql://user:password@localhost/dbname |
 
-## 🔐 Security Considerations
 
-- Update the default database credentials
-- Implement authentication and authorization
-- Use HTTPS in production
-- Validate and sanitize all inputs
-- Implement rate limiting for API endpoints
 
 ## 🚀 Deployment
 
@@ -131,39 +120,5 @@ pytest
 4. Set up reverse proxy (like Nginx)
 5. Enable HTTPS
 
-Example production startup command:
-```bash
-gunicorn app.main:app -w 4 -k uvicorn.workers.UvicornWorker
-```
 
-## ✨ Future Enhancements
 
-- [ ] Add authentication and authorization
-- [ ] Implement more complex database relationships
-- [ ] Add request validation middleware
-- [ ] Create comprehensive test suite
-- [ ] Add logging configuration
-- [ ] Implement caching
-- [ ] Add database migrations
-
-## 📝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Authors
-
-- Your Name - Initial work
-
-## 🙏 Acknowledgments
-
-- FastAPI documentation
-- SQLAlchemy documentation
-- PostgreSQL documentation
